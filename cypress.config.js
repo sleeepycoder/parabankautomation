@@ -1,18 +1,19 @@
-const { defineConfig } = require("cypress");
+const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: "http://parabank.parasoft.com",
-    reporter: "mochawesome",
-    reporterOptions: {
-      reportDir: "cypress/reports",
-      reportFilename: "mochawesome",
-      overwrite: false,
-      html: true,
-      json: true,
+    baseUrl: 'https://parabank.parasoft.com',
+    retries: {
+      runMode: 2,
+      openMode: 0
     },
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-    },
+    video: false
   },
-});
+  reporter: 'mochawesome',
+  reporterOptions: {
+    reportDir: 'cypress/reports',
+    overwrite: false,
+    html: false,
+    json: true
+  }
+})
