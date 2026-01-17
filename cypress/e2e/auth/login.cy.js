@@ -13,7 +13,7 @@ describe('Login Tests', () => {
 
   it('should login successfully', () => {
     LoginPage.login(user.username, user.password)
-    HomePage.welcomeMessage().should('contain', 'Welcome')
+    HomePage.welcomeMessage().should('have.text', 'Welcome')
   });
 
   it('should fail login with invalid credentials', () => {

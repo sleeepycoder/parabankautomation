@@ -1,6 +1,6 @@
 class HomePage {
   welcomeMessage() {
-    return cy.contains('Welcome')
+    return cy.get('.smallText > b').should('have.text', 'Welcome')
   }
 
   openNewAccountLink() {
