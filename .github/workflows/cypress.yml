@@ -22,26 +22,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Clear Cypress cache
-        run: npx cypress cache clear
+      - name: Install Cypress binary
+        run: npx cypress install
 
       - name: Run Cypress tests
         run: npm run cy:run
 
-      - name: Generate report
-        if: always()
-        run: |
-          npm run report:merge
-          npm run report:generate
-
-      - name: Upload Cypress reports
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: cypress-report
-          path: cypress/reports
-
-      - name: Upload screenshots
+      - name: Upload screenshots (on failure)
         if: failure()
         uses: actions/upload-artifact@v4
         with:
