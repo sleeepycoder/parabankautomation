@@ -5,7 +5,11 @@
     "node": true,
     "cypress/globals": true
   },
-  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:cypress/recommended",
+    "plugin:prettier/recommended"
+  ],
   "plugins": ["cypress", "prettier"],
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -19,6 +23,7 @@
         "argsIgnorePattern": "^_"
       }
     ],
-    "no-console": "warn"
+    "no-console": "warn",
+    "cypress/no-unnecessary-waiting": "warn"
   }
 }
