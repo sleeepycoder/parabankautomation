@@ -1,6 +1,6 @@
-const { defineConfig } = require('cypress')
+import { defineConfig } from 'cypress'
 
-module.exports = defineConfig({
+export default defineConfig({
   e2e: {
     baseUrl: 'https://parabank.parasoft.com',
 
@@ -12,8 +12,7 @@ module.exports = defineConfig({
     video: false,
 
     setupNodeEvents(on, config) {
-      // 🔹 Enable cypress-grep (for @smoke, @regression, etc.)
-      require('cypress-grep/src/plugin')(config)
+      // No plugins needed for Cypress 15
       return config
     },
   },

@@ -8,8 +8,9 @@ describe('User Registration', () => {
     cy.fixture('userRegistration').then(data => {
       user = {
         ...data,
-         username: faker.internet.username({ length: 8 }).toLowerCase() +
-                faker.number.int({ min: 100, max: 999 })
+        username:
+          faker.internet.username({ length: 8 }).toLowerCase() +
+          faker.number.int({ min: 100, max: 999 }),
       };
     });
   });
