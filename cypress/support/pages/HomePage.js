@@ -1,19 +1,19 @@
 class HomePage {
   welcomeMessage() {
-    return cy.get('.smallText > b').should('have.text', 'Welcome')
+    return cy.get('.smallText > b').should('have.text', 'Welcome');
   }
 
   openNewAccountLink() {
-    return cy.contains('Open New Account')
+    return cy.contains('Open New Account');
   }
 
   transferFundsLink() {
-    return cy.contains('Transfer Funds')
+    return cy.contains('Transfer Funds');
   }
 
   logoutLink() {
-    return cy.contains('Log Out')
+    return cy.contains('Log Out');
   }
 }
 
-export default new HomePage()
+export default new HomePage();

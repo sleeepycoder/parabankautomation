@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2026-01-17T18:37:06.227Z",
+    "end": "2026-01-17T18:38:00.868Z",
+    "duration": 54641,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "abb0192a-2eb5-4d86-b1e9-94057cd91969",
+      "title": "",
+      "fullFile": "cypress/e2e/auth/login.cy.js",
+      "file": "cypress/e2e/auth/login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4a70626a-5d16-4216-b753-79fbbb767e52",
+          "title": "Login Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should login successfully",
+              "fullTitle": "Login Tests should login successfully",
+              "timedOut": null,
+              "duration": 6857,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_LoginPage.default.login(user.username, user.password);\n_HomePage.default.welcomeMessage().should('have.text', 'Welcome');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.smallText > b`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.smallText > b`, but never found it.\n    at HomePage.welcomeMessage (webpack://parabankautomation/./cypress/support/pages/HomePage.js:3:36)\n    at Context.eval (webpack://parabankautomation/./cypress/e2e/auth/login.cy.js:15:13)",
+                "diff": null
+              },
+              "uuid": "8ae70ae9-d012-4f37-9e46-55463ac70ee8",
+              "parentUUID": "4a70626a-5d16-4216-b753-79fbbb767e52",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should fail login with invalid credentials",
+              "fullTitle": "Login Tests should fail login with invalid credentials",
+              "timedOut": null,
+              "duration": 7014,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_LoginPage.default.login('invalidUser', 'wrongPassword');\ncy.get('.error').should('contain', 'An internal error has occurred and has been logged.');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<p.error>' to contain 'An internal error has occurred and has been logged.'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<p.error>' to contain 'An internal error has occurred and has been logged.'\n    at Context.eval (webpack://parabankautomation/./cypress/e2e/auth/login.cy.js:20:21)",
+                "diff": null
+              },
+              "uuid": "cab52ad3-b151-4a09-932f-142d684bfb69",
+              "parentUUID": "4a70626a-5d16-4216-b753-79fbbb767e52",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "8ae70ae9-d012-4f37-9e46-55463ac70ee8",
+            "cab52ad3-b151-4a09-932f-142d684bfb69"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 13871,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

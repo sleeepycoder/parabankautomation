@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "cy:run": "cypress run",
     "report:merge": "mochawesome-merge cypress/reports/*.json > cypress/reports/output.json",
@@ -16,6 +17,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@faker-js/faker": "^10.2.0",
     "cypress": "^15.9.0",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
