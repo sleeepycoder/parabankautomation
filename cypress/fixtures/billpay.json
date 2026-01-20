@@ -1,0 +1,10 @@
+{
+  "payeeName": "Electric Company",
+  "address": "456 Market Street",
+  "city": "San Jose",
+  "state": "CA",
+  "zip": "95112",
+  "phone": "9876543210",
+  "account": "99887766",
+  "amount": "25"
+}
