@@ -9,8 +9,8 @@ describe('User Registration', () => {
       user = {
         ...data,
         username:
-          faker.internet.username({ length: 8 }).toLowerCase() +
-          faker.number.int({ min: 100, max: 999 }),
+          faker.internet.username({ length: 10 }).toLowerCase() +
+          faker.number.int({ min: 1, max: 9999 }),
       };
     });
   });

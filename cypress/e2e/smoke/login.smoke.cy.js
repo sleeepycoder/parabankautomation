@@ -1,7 +1,7 @@
 import LoginPage from '../../support/pages/LoginPage';
 import HomePage from '../../support/pages/HomePage';
 
-describe('Login Tests @smoke', () => {
+describe('Login Tests', () => {
   let user;
   beforeEach(() => {
     cy.fixture('userlogin').then(data => {
